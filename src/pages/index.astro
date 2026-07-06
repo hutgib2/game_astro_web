@@ -4,10 +4,16 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<div class="sections">
-		<div class="section-1"></div>
+		<!-- <div class="section-1"></div>
 		<div class="section-2"></div>
 		<div class="section-3"></div>
-		<div class="section-4"></div>
+		<div class="section-4"></div> -->
+		<div class="section-5"></div>
+		<div class="other-sections">
+			<div class="section-6"></div>
+			<div class="section-7"></div>
+			<div class="section-8"></div>
+		</div>
 	</div>
 </Layout>
 
@@ -16,6 +22,12 @@ import Layout from '../layouts/Layout.astro';
 		display: flex;
 		height: 400px;
 		width: 400px;
+		flex-direction: row;
+	}
+
+	.other-sections {
+		display: flex;
+		flex: 1;
 		flex-direction: column;
 	}
 
@@ -35,6 +47,28 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.section-4 {
+		background-color: darkslategray;
+		flex: 2;
+		/* if section is meant to be twice as big as all 3 colors combined instead then it should be flex: 6 */
+
+	}
+
+	.section-5 {
+		background-color: grey;
+		flex: 1;
+	}
+
+	.section-6 {
+		background-color: lightslategray;
+		flex: 1;
+	}
+
+	.section-7 {
+		background-color: darkgrey;
+		flex: 1;
+	}
+
+	.section-8 {
 		background-color: darkslategray;
 		flex: 2;
 		/* if section is meant to be twice as big as all 3 colors combined instead then it should be flex: 6 */
