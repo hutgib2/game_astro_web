@@ -1,84 +1,43 @@
 ---
-// JavaScript Section
 import Layout from '../layouts/Layout.astro';
-import GameCard  from '../components/GameCard.astro';
-import Swiper from '../components/Swiper.astro';
-import { gameData } from '../lib/gameData';
-import DupaLogoText from '../assets/my_logo_text.png';
-import Image from 'astro/components/Image.astro';
-import Header  from '../components/Header.astro';
 ---
 
-<!-- HTML Section -->
 <Layout>
-	<Header/>
-	
-	<div class="row-1">
-		<h1 class="welcome">WELCOME TO...</h1>
-		<Image src={DupaLogoText} alt="Dupa Games Logo" width={200}/>
+	<div class="sections">
+		<div class="section-1"></div>
+		<div class="section-2"></div>
+		<div class="section-3"></div>
+		<div class="section-4"></div>
 	</div>
-	
-	
-<!-- 
-	-	I want you to create a clickable link, text inside should say e.g. "Play", 
-	-	remove clickability of image (what is making it clickable?)
-	
- 	-	position it on bottom right
--->
-
-	<div class="carousel">
-		<h1 class="carousel-heading">Browse all games</h1>
-		<Swiper>
-			{Object.values(gameData).map((game) => (
-				<div class="swiper-slide">
-					<GameCard 
-						title={game['title']}
-						image={game['image']}
-						description={game['description']}
-						href={game['href']}
-					/>
-				</div>
-			))}
-		</Swiper>
-	</div>
-
-	<!-- 
-		We want to style our webpage better - can you:
-			- add a heading above the carousel to say something e.g. "Browse all games" 
-			- add a welcome heading to the top as well e.g. "Welcome to Dupa Games"
-			- either add padding to the carousel or center it on the screen 
-	-->
-
 </Layout>
 
-<!-- 
-	There are two ways to write CSS in an astro file
-	1. Write styles inside page's <style> - only applies to elements in current file
-	2. Import a css file from styles/ - can apply to multiple files or globally
--->
-	
-<!-- CSS Section - allows us to add scoped CSS to our html -->
 <style>
-	.row-1 {
+	.sections {
 		display: flex;
+		height: 400px;
+		width: 400px;
 		flex-direction: column;
-		justify-self: center;
-		gap: var(--gap-3);
-	}
-	
-	.welcome {
-		color: var(--color-brand);
 	}
 
-	.carousel {
-		display: flex;
-		flex-direction: column;
-		justify-self: center;
-		width: 1024px;
+	.section-1 {
+		background-color: grey;
+		flex: 1;
 	}
 
-	.carousel-heading {
-		color: var(--color-text);
+	.section-2 {
+		background-color: lightslategray;
+		flex: 1;
 	}
 
+	.section-3 {
+		background-color: darkgrey;
+		flex: 1;
+	}
+
+	.section-4 {
+		background-color: darkslategray;
+		flex: 2;
+		/* if section is meant to be twice as big as all 3 colors combined instead then it should be flex: 6 */
+
+	}
 </style>

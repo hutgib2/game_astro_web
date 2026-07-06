@@ -1,0 +1,19 @@
+I need to practise designing simple web layouts using CSS Flex. I've attached a very basic index.astro file that you can use to get started - it's just a square divided into 4 sections.
+
+To set up:
+- inside the game website astro project - create a new git branch called "css-hw"
+- replace the content of the index.html for the game site with the one attached
+- run the server (npm run dev) and look at the output on the browser
+- make sure you read the css and understand what each line does (you can comment out a line to see how it affects the visual)
+
+Then for the homework, first without touching the html and only using css flex
+1. Make the sections display as 4 rows rather than 4 columns
+2. Make the last column twice the width of the first three
+
+Then for the next part, i will need to add more <div> tags to the html. Try to recreate the layouts in the attached image files ! 
+
+For all of these problems, when i have completed one, i must commit the changes to git and then try the next one. You don't need to create any new files, just keep adding to the index.astro file as the answers will be stored in the git history. 
+
+I should only need to use the css styles to solve them all:
+- flex
+- flex-direction 
